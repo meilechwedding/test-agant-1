@@ -1,0 +1,28 @@
+app = "whatsapp-personal-agent"
+primary_region = "iad"
+
+[build]
+
+[env]
+  PORT = "8080"
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 8080
+  processes = ["web"]
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+    force_https = true
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+[processes]
+  web = "node src/server.js"
+  worker = "node src/worker.js"
+
+[[mounts]]
+  source = "agent_data"
+  destination = "/app/data"

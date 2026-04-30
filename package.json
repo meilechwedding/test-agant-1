@@ -1,0 +1,28 @@
+{
+  "name": "whatsapp-personal-agent",
+  "version": "0.1.0",
+  "description": "Personal WhatsApp agent that runs long-horizon tasks (research, calls, browsing, coding) until done.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "worker": "node src/worker.js",
+    "setup": "node scripts/setup.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.0",
+    "@anthropic-ai/sdk": "^0.32.0",
+    "better-sqlite3": "^11.3.0",
+    "bullmq": "^5.13.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "ioredis": "^5.4.1",
+    "playwright": "^1.48.0",
+    "twilio": "^5.3.0",
+    "undici": "^6.20.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
