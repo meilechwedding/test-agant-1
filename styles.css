@@ -643,14 +643,69 @@ body[data-anim-btnglow="off"] .btn-blue::before{display:none}
 }
 
 /* ============== RESPONSIVE ============== */
-@media (max-width:980px){
+/* tablets — tighten the very generous desktop spacing */
+@media (max-width:1024px){
+  .container{padding:0 28px}
+  .hero{padding:140px 0 180px}
+  section.section{padding:160px 0}
+  .section-head{margin-bottom:80px}
+  .svc-hero{padding:120px 0 80px}
+  .svc-other{padding:120px 0}
+  .case-grid{gap:48px}
+  .about-wrap{gap:56px}
+  .about-body{gap:56px}
+}
+
+/* small tablets / large phones — collapse to single columns */
+@media (max-width:900px){
   nav.links{display:none}
   .nav-cta .btn-primary{padding:0 14px}
-  .svc-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr;gap:16px}
   .proc-track{grid-template-columns:1fr 1fr}
   .form{padding:32px 24px}
   .form-row{grid-template-columns:1fr}
-  .foot-top{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr 1fr;gap:48px;margin-bottom:48px}
   .case-grid,.split,.svc-other-grid{grid-template-columns:1fr}
   .svc-other-grid > *{border-bottom:1px solid var(--hair-border)}
+  .svc-card{padding:36px 32px}
+  .proc-cell{padding:40px 28px;min-height:0}
+  .proc-cell h3{font-size:30px}
+  .about-cell{padding:36px 28px}
+}
+
+/* phones */
+@media (max-width:600px){
+  .container{padding:0 20px}
+  .hero{padding:112px 0 140px}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-cta .btn{justify-content:center;width:100%}
+  h1.hero-title{margin:24px 0 36px}
+  .hero p.lede{font-size:16.5px}
+  section.section{padding:96px 0}
+  .section-head{margin-bottom:48px}
+  .svc-hero{padding:96px 0 56px}
+  .svc-other{padding:80px 0}
+  .svc-hero h1{margin:24px 0 20px}
+  .svc-card{padding:32px 26px;min-height:0}
+  .svc-card .svc-icon{margin-bottom:20px;width:48px;height:48px}
+  .svc-icon svg{width:40px;height:40px}
+  .proc-track{grid-template-columns:1fr}
+  .proc-cell{padding:32px 24px}
+  .proc-cta{margin-top:32px}
+  .about-wrap,.about-body{gap:40px}
+  .about-cell{padding:32px 24px}
+  .about-quote{padding:40px 20px 36px}
+  .form{padding:28px 20px;gap:18px}
+  .form-submit{align-self:stretch;justify-content:center}
+  .case-grid{gap:32px}
+  .case-quote{padding:24px 20px;grid-template-columns:28px 1fr;gap:14px}
+  .case-quote .qmark{font-size:48px}
+  .case-quote q{font-size:18px}
+  .split{gap:16px}
+  .split-cell{padding:26px 22px}
+  .foot-top{grid-template-columns:1fr;gap:36px;margin-bottom:40px}
+  .foot-bottom{justify-content:center;text-align:center}
+  .foot-bottom .mantra-line{font-size:16px}
+  footer{padding:56px 0 32px}
+  .btn-lg{height:48px;padding:0 22px;font-size:11.5px}
 }
